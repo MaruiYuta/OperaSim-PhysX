@@ -11,12 +11,12 @@ TagManager:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - 
+  - Ignore Collision
   - Water
   - UI
   - Bucket
   - SoilParticle
-  - 
+  - BucketInner
   - 
   - 
   - 
