@@ -1,14 +1,32 @@
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class RotateObject : MonoBehaviour
 {
     // 回転速度を指定します（度/秒）
     public float rotationSpeed = 90.0f;  // 例えば90度/秒
+    public float delayTime = 180.0f;     // 180秒の遅延時間
 
     // 回転した角度を追跡するための変数
     private float totalRotation = 0.0f;
+
+    void Start()
+    {
+        // 初期状態でスクリプトを無効化
+        enabled = false;
+
+        // 180秒後に回転を開始するコルーチンを開始
+        StartCoroutine(DelayedRotationStart());
+    }
+
+    private IEnumerator DelayedRotationStart()
+    {
+        // 180秒間待つ
+        yield return new WaitForSeconds(delayTime);
+
+        // 回転を開始するためにスクリプトを有効化
+        enabled = true;
+    }
 
     void Update()
     {
