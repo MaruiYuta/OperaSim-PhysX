@@ -5,7 +5,7 @@ public class RotateObject : MonoBehaviour
 {
     // 回転速度を指定します（度/秒）
     public float rotationSpeed = 90.0f;  // 例えば90度/秒
-    public float delayTime = 180.0f;     // 180秒の遅延時間
+    public float delayTime = 135.0f;     // 180秒の遅延時間
 
     // 回転した角度を追跡するための変数
     private float totalRotation = 0.0f;
@@ -21,7 +21,7 @@ public class RotateObject : MonoBehaviour
 
     private IEnumerator DelayedRotationStart()
     {
-        // 180秒間待つ
+        // 135秒間待つ
         yield return new WaitForSeconds(delayTime);
 
         // 回転を開始するためにスクリプトを有効化

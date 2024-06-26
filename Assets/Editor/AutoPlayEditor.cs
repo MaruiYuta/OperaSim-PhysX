@@ -5,7 +5,7 @@ using UnityEngine;
 public class AutoPlayEditor : EditorWindow
 {
     private static bool isPlaying = false;
-    private static float playDuration = 10f; // 10 seconds
+    private static float playDuration = 160f; // 10 seconds
     private static float stopDuration = 10f;  // 10 seconds
     private static double startTime = 0;
     private static bool autoPlayActive = false;
